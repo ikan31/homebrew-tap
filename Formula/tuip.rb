@@ -5,21 +5,21 @@
 class Tuip < Formula
   desc "Terminal CLI and TUI for checking public SaaS status pages"
   homepage "https://github.com/ikan31/tuip"
-  version "1.0.9"
+  version "1.0.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ikan31/tuip/releases/download/v1.0.9/tuip_1.0.9_Darwin_x86_64.tar.gz"
-      sha256 "9f075a784155765e1ffb1ada8928255eee8f2221d07f29945bd38db0b618ded4"
+      url "https://github.com/ikan31/tuip/releases/download/v1.0.10/tuip_1.0.10_Darwin_x86_64.tar.gz"
+      sha256 "af395b4cb6b6f70e230a33063509d2ea3e517099d5f29a811a16bf7283113511"
 
       define_method(:install) do
         bin.install "tuip"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ikan31/tuip/releases/download/v1.0.9/tuip_1.0.9_Darwin_arm64.tar.gz"
-      sha256 "f52c21af7bc2e49bf6bf865e8306ba75096e4f8397d88952086a2c568da72e01"
+      url "https://github.com/ikan31/tuip/releases/download/v1.0.10/tuip_1.0.10_Darwin_arm64.tar.gz"
+      sha256 "edaea6d38aad62a850d9117e0afb96f24339b7b6f5fa28580bf10258a14357dd"
 
       define_method(:install) do
         bin.install "tuip"
@@ -29,15 +29,15 @@ class Tuip < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ikan31/tuip/releases/download/v1.0.9/tuip_1.0.9_Linux_x86_64.tar.gz"
-      sha256 "bcbaa5ba5a8801c802fc2f2d1cddb1eb17f5833cb0fdffdf206f953f9d8cf54b"
+      url "https://github.com/ikan31/tuip/releases/download/v1.0.10/tuip_1.0.10_Linux_x86_64.tar.gz"
+      sha256 "b1eec2c498b7127e463aa68b466ad0263c3a388bb7c78f6703de9a451214eaa2"
       define_method(:install) do
         bin.install "tuip"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ikan31/tuip/releases/download/v1.0.9/tuip_1.0.9_Linux_arm64.tar.gz"
-      sha256 "e8b56f69cb0470a78d31697dc092983ff8fb621259479ef57d3e8d152879fbe2"
+      url "https://github.com/ikan31/tuip/releases/download/v1.0.10/tuip_1.0.10_Linux_arm64.tar.gz"
+      sha256 "545d6d3b2f1298443376b084a9b3f592b35156fa97a7892128f7d36e99f6ab5a"
       define_method(:install) do
         bin.install "tuip"
       end
